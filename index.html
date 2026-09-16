@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CV - Andi Nurhikma</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #e8edf5;
+            color: #172554;
+            padding: 30px;
+        }
+
+        .cv {
+            width: 900px;
+            max-width: 100%;
+            margin: auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+
+
+        /* =========================
+           SIDEBAR
+        ========================= */
+
+        .sidebar {
+            background: linear-gradient(160deg, #0f2d5c, #172554);
+            color: white;
+            padding: 30px 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile img {
+            width: 155px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 5px solid white;
+            display: block;
+            margin: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .profile h1 {
+            margin-top: 18px;
+            font-size: 25px;
+        }
+
+        .profile p {
+            color: #dbeafe;
+            font-size: 14px;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .garis {
+            width: 80px;
+            height: 4px;
+            background: #60a5fa;
+            margin: 18px auto;
+            border-radius: 5px;
+        }
+
+        .sidebar-section {
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sidebar-section h2 {
+            font-size: 17px;
+            color: white;
+            border-bottom: 2px solid #60a5fa;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            font-size: 13px;
+            margin: 12px 0;
+            word-break: break-word;
+        }
+
+        .skills {
+            list-style: none;
+        }
+
+        .skills li {
+            font-size: 13px;
+            margin: 10px 0;
+            padding-left: 5px;
+        }
+
+        .skills li::before {
+            content: "•";
+            color: #60a5fa;
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        /* Dekorasi bawah */
+
+        .wave {
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 350px;
+            height: 120px;
+            border-radius: 50%;
+            border-top: 20px solid rgba(96,165,250,0.25);
+            transform: rotate(10deg);
+        }
+
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .content {
+            padding: 40px;
+        }
+
+        .header {
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #172554;
+        }
+
+        .header p {
+            color: #2563eb;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+
+        /* SECTION */
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #172554;
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 7px;
+            height: 28px;
+            background: #2563eb;
+            border-radius: 5px;
+        }
+
+        .section p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* ITEM */
+
+        .item {
+            position: relative;
+            border-left: 3px solid #dbeafe;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .item::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #2563eb;
+            border-radius: 50%;
+            position: absolute;
+            left: -7px;
+            top: 4px;
+        }
+
+        .item h3 {
+            font-size: 17px;
+            color: #172554;
+            margin-bottom: 4px;
+        }
+
+        .date {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+
+        /* TAG */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1d4ed8;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+
+        /* BUTTON */
+
+        .print {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .print button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .print button:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .cv {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+        }
+
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @media print {
+
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cv {
+                width: 100%;
+                box-shadow: none;
+            }
+
+            .print {
+                display: none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="cv">
+
+
+    <!-- =================================
+         SIDEBAR
+    ================================== -->
+
+    <aside class="sidebar">
+
+        <div class="profile">
+
+            <!-- FOTO BARU -->
+            <img src="foto.jpg" alt="Foto Andi Nurhikma">
+
+            <h1>Andi Nurhikma</h1>
+
+            <p>
+                Teknik Jaringan Komputer
+                dan Telekomunikasi
+            </p>
+
+            <div class="garis"></div>
+
+        </div>
+
+
+        <!-- KONTAK -->
+
+        <div class="sidebar-section contact">
+
+            <h2>KONTAK</h2>
+
+            <p>
+                📧
+                anurhikmamakmur@gmail.com
+            </p>
+
+            <p>
+                📍
+                Indonesia
+            </p>
+
+        </div>
+
+
+        <!-- KEAHLIAN -->
+
+        <div class="sidebar-section">
+
+            <h2>KEAHLIAN</h2>
+
+            <ul class="skills">
+
+                <li>
+                    Crimping Kabel
+                </li>
+
+                <li>
+                    Perakitan Komputer
+                </li>
+
+                <li>
+                    Dasar Jaringan Komputer
+                </li>
+
+                <li>
+                    Troubleshooting
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- BAHASA -->
+
+        <div class="sidebar-section">
+
+            <h2>BAHASA</h2>
+
+            <ul class="skills">
+
+                <li>
+                    Bahasa Indonesia
+                </li>
+
+                <li>
+                    Bahasa Inggris Dasar
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="wave"></div>
+
+    </aside>
+
+
+
+    <!-- =================================
+         KONTEN UTAMA
+    ================================== -->
+
+    <main class="content">
+
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>
+                Andi Nurhikma
+            </h1>
+
+            <p>
+                Teknik Jaringan Komputer dan Telekomunikasi
+            </p>
+
+        </div>
+
+
+
+        <!-- PROFIL -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Profil
+            </h2>
+
+            <p>
+                Saya adalah seorang pelajar jurusan Teknik Jaringan
+                Komputer dan Telekomunikasi yang memiliki minat pada
+                bidang komputer, jaringan, dan teknologi informasi.
+                Saya memiliki keterampilan dasar dalam crimping kabel
+                serta pengalaman dalam perakitan komputer. Saya
+                berkomitmen untuk terus belajar, mengembangkan
+                kemampuan, dan siap bekerja sama dalam tim.
+            </p>
+
+        </section>
+
+
+
+        <!-- PENDIDIKAN -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Pendidikan
+            </h2>
+
+            <div class="item">
+
+                <h3>
+                    SMK Airlangga
+                </h3>
+
+                <span class="date">
+                    Sedang Menempuh Pendidikan
+                </span>
+
+                <p>
+                    Jurusan Teknik Jaringan Komputer
+                    dan Telekomunikasi.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PENGALAMAN -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Pengalaman
+            </h2>
+
+
+            <div class="item">
+
+                <h3>
+                    Perakitan Komputer
+                </h3>
+
+                <span class="date">
+                    Pengalaman Praktik
+                </span>
+
+                <p>
+                    Melakukan proses perakitan komputer dengan
+                    mengenali komponen perangkat keras dan
+                    memasangnya sesuai fungsi masing-masing.
+                </p>
+
+            </div>
+
+
+            <div class="item">
+
+                <h3>
+                    Crimping Kabel Jaringan
+                </h3>
+
+                <span class="date">
+                    Pengalaman Praktik
+                </span>
+
+                <p>
+                    Melakukan proses crimping kabel jaringan
+                    menggunakan konektor RJ45 dan memahami
+                    dasar penyusunan kabel jaringan.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- KETERAMPILAN -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Keterampilan
+            </h2>
+
+            <div class="tags">
+
+                <span class="tag">
+                    Crimping Kabel
+                </span>
+
+                <span class="tag">
+                    Perakitan PC
+                </span>
+
+                <span class="tag">
+                    Hardware
+                </span>
+
+                <span class="tag">
+                    Jaringan Komputer
+                </span>
+
+                <span class="tag">
+                    Troubleshooting Dasar
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRINT -->
+
+        <div class="print">
+
+            <button onclick="window.print()">
+                🖨️ Cetak / Simpan PDF
+            </button>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+</body>
+</html>
