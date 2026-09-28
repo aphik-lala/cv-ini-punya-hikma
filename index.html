@@ -4,607 +4,2213 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CV - Andi Nurhikma</title>
+    <title>LUMÉA Beauty - Beauty & Skincare</title>
+
+    <meta
+        name="description"
+        content="LUMÉA Beauty - Website kecantikan modern untuk skincare, makeup, beauty tips dan produk kecantikan."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <style>
+        /* =========================
+           GLOBAL
+        ========================= */
+
+        :root {
+            --pink: #d98ca0;
+            --pink-dark: #b86c82;
+            --pink-soft: #f9e8ed;
+            --cream: #fffaf7;
+            --white: #ffffff;
+            --text: #33272b;
+            --muted: #7d6f73;
+            --dark: #21191c;
+            --border: #eadde0;
+            --shadow: 0 15px 45px rgba(72, 35, 47, 0.12);
+            --radius: 22px;
+        }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background: #e8edf5;
-            color: #172554;
-            padding: 30px;
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        .cv {
-            width: 900px;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        img {
             max-width: 100%;
-            margin: auto;
-            background: white;
-            display: grid;
-            grid-template-columns: 290px 1fr;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-        }
-
-
-        /* =========================
-           SIDEBAR
-        ========================= */
-
-        .sidebar {
-            background: linear-gradient(160deg, #0f2d5c, #172554);
-            color: white;
-            padding: 30px 25px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .profile {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .profile img {
-            width: 155px;
-            height: 190px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 5px solid white;
             display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
             margin: auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-
-        .profile h1 {
-            margin-top: 18px;
-            font-size: 25px;
-        }
-
-        .profile p {
-            color: #dbeafe;
-            font-size: 14px;
-            margin-top: 8px;
-            line-height: 1.5;
-        }
-
-        .garis {
-            width: 80px;
-            height: 4px;
-            background: #60a5fa;
-            margin: 18px auto;
-            border-radius: 5px;
-        }
-
-        .sidebar-section {
-            margin-top: 30px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .sidebar-section h2 {
-            font-size: 17px;
-            color: white;
-            border-bottom: 2px solid #60a5fa;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-
-        .contact p {
-            font-size: 13px;
-            margin: 12px 0;
-            word-break: break-word;
-        }
-
-        .skills {
-            list-style: none;
-        }
-
-        .skills li {
-            font-size: 13px;
-            margin: 10px 0;
-            padding-left: 5px;
-        }
-
-        .skills li::before {
-            content: "•";
-            color: #60a5fa;
-            font-size: 20px;
-            margin-right: 8px;
-        }
-
-        /* Dekorasi bawah */
-
-        .wave {
-            position: absolute;
-            bottom: -30px;
-            left: -30px;
-            width: 350px;
-            height: 120px;
-            border-radius: 50%;
-            border-top: 20px solid rgba(96,165,250,0.25);
-            transform: rotate(10deg);
-        }
-
-
-        /* =========================
-           CONTENT
-        ========================= */
-
-        .content {
-            padding: 40px;
-        }
-
-        .header {
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            font-size: 36px;
-            color: #172554;
-        }
-
-        .header p {
-            color: #2563eb;
-            font-size: 17px;
-            font-weight: bold;
-            margin-top: 5px;
-        }
-
-
-        /* SECTION */
 
         .section {
-            margin-bottom: 30px;
+            padding: 95px 0;
         }
 
         .section-title {
+            max-width: 700px;
+            margin: 0 auto 55px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: var(--pink-dark);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.15;
+            margin: 10px 0 15px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 250, 247, 0.9);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(234, 221, 224, .7);
+        }
+
+        .navbar {
+            height: 78px;
             display: flex;
             align-items: center;
-            gap: 12px;
-            color: #172554;
-            font-size: 21px;
-            margin-bottom: 15px;
+            justify-content: space-between;
         }
 
-        .section-title::before {
-            content: "";
-            width: 7px;
-            height: 28px;
-            background: #2563eb;
-            border-radius: 5px;
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            font-weight: 700;
+            color: var(--pink-dark);
+            letter-spacing: 1px;
         }
 
-        .section p {
-            color: #444;
+        .logo small {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            font-size: 8px;
+            letter-spacing: 4px;
+            text-align: center;
+            color: var(--muted);
+            margin-top: -5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
             font-size: 14px;
-            line-height: 1.7;
+            color: var(--text);
+            transition: .3s;
         }
 
+        .nav-links a:hover {
+            color: var(--pink-dark);
+        }
 
-        /* ITEM */
+        .menu-btn {
+            display: none;
+            border: none;
+            background: transparent;
+            font-size: 26px;
+            cursor: pointer;
+        }
 
-        .item {
+        .theme-btn {
+            border: 1px solid var(--border);
+            background: var(--white);
+            width: 39px;
+            height: 39px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .theme-btn:hover {
+            transform: rotate(20deg);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 78px;
+            display: flex;
+            align-items: center;
             position: relative;
-            border-left: 3px solid #dbeafe;
-            padding-left: 20px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,250,247,.96) 0%,
+                    rgba(255,250,247,.82) 45%,
+                    rgba(255,250,247,.15) 100%
+                ),
+                url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            right: -180px;
+            bottom: -180px;
+            background: var(--pink-soft);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .eyebrow {
+            color: var(--pink-dark);
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 7vw, 80px);
+            line-height: 1.02;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--pink-dark);
+        }
+
+        .hero p {
+            max-width: 580px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 13px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 23px;
+            border-radius: 30px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            color: white;
+            background: var(--pink-dark);
+            box-shadow: 0 12px 30px rgba(184,108,130,.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #a85c72;
+        }
+
+        .btn-outline {
+            color: var(--text);
+            background: rgba(255,255,255,.6);
+            border-color: var(--border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--pink);
+            color: var(--pink-dark);
+        }
+
+        .hero-info {
+            margin-top: 45px;
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .hero-info strong {
+            display: block;
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            color: var(--pink-dark);
+        }
+
+        .hero-info span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           CATEGORY
+        ========================= */
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .category {
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: var(--radius);
+            background: var(--white);
+            border: 1px solid var(--border);
+            transition: .3s;
+            box-shadow: 0 8px 25px rgba(70,35,45,.05);
+        }
+
+        .category:hover {
+            transform: translateY(-7px);
+            border-color: var(--pink);
+        }
+
+        .category-icon {
+            width: 65px;
+            height: 65px;
+            margin: auto;
+            border-radius: 50%;
+            background: var(--pink-soft);
+            display: grid;
+            place-items: center;
+            font-size: 27px;
+            margin-bottom: 17px;
+        }
+
+        .category h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            margin-bottom: 7px;
+        }
+
+        .category p {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        .product-search {
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .product-search input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            outline: none;
+            color: var(--text);
+        }
+
+        .product-search input:focus {
+            border-color: var(--pink);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: .35s;
+            box-shadow: 0 8px 30px rgba(70,35,45,.06);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-image {
+            height: 260px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-image-1 {
+            background-image: url("https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .product-image-2 {
+            background-image: url("https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .product-image-3 {
+            background-image: url("https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .product-image-4 {
+            background-image: url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .badge {
+            position: absolute;
+            top: 13px;
+            left: 13px;
+            padding: 6px 10px;
+            border-radius: 20px;
+            background: var(--white);
+            color: var(--pink-dark);
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .product-content {
+            padding: 20px;
+        }
+
+        .product-content small {
+            color: var(--pink-dark);
+            font-weight: 600;
+        }
+
+        .product-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 21px;
+            margin: 5px 0;
+        }
+
+        .product-content p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 17px;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .product-btn {
+            border: none;
+            background: var(--pink-soft);
+            color: var(--pink-dark);
+            width: 37px;
+            height: 37px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .product-btn:hover {
+            background: var(--pink-dark);
+            color: white;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            height: 550px;
+            border-radius: 30px;
+            background:
+                url("https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1000&q=85")
+                center/cover;
+            box-shadow: var(--shadow);
+        }
+
+        .about-content span {
+            color: var(--pink-dark);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .about-content h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 5vw, 55px);
+            line-height: 1.15;
+            margin: 12px 0 20px;
+        }
+
+        .about-content p {
+            color: var(--muted);
             margin-bottom: 20px;
         }
 
-        .item::before {
-            content: "";
-            width: 12px;
-            height: 12px;
-            background: #2563eb;
-            border-radius: 50%;
-            position: absolute;
-            left: -7px;
-            top: 4px;
+        .check-list {
+            list-style: none;
+            margin: 25px 0;
         }
 
-        .item h3 {
-            font-size: 17px;
-            color: #172554;
-            margin-bottom: 4px;
-        }
-
-        .date {
-            display: inline-block;
-            background: #dbeafe;
-            color: #1d4ed8;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-bottom: 8px;
-        }
-
-
-        /* TAG */
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 9px;
-        }
-
-        .tag {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            color: #1d4ed8;
-            padding: 8px 13px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-
-        /* BUTTON */
-
-        .print {
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        .print button {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
+        .check-list li {
+            margin: 12px 0;
             font-size: 14px;
         }
 
-        .print button:hover {
-            background: #1d4ed8;
+        .check-list li::before {
+            content: "✓";
+            display: inline-grid;
+            place-items: center;
+            width: 23px;
+            height: 23px;
+            margin-right: 10px;
+            border-radius: 50%;
+            background: var(--pink-soft);
+            color: var(--pink-dark);
+            font-weight: bold;
         }
 
+        /* =========================
+           BEAUTY TIPS
+        ========================= */
+
+        .tips {
+            background: #f7eef0;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .tip-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: .3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .tip-image {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tip-1 {
+            background-image: url("https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .tip-2 {
+            background-image: url("https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .tip-3 {
+            background-image: url("https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=900&q=80");
+        }
+
+        .tip-content {
+            padding: 23px;
+        }
+
+        .tip-content span {
+            color: var(--pink-dark);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .tip-content h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 22px;
+            margin: 7px 0 9px;
+        }
+
+        .tip-content p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           ROUTINE
+        ========================= */
+
+        .routine {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .routine-card {
+            padding: 27px 20px;
+            text-align: center;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+        }
+
+        .routine-number {
+            width: 42px;
+            height: 42px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--pink-dark);
+            color: white;
+            font-weight: 700;
+        }
+
+        .routine-card h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 7px;
+        }
+
+        .routine-card p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================
+           TESTIMONIAL
+        ========================= */
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .testimonial {
+            padding: 28px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+        }
+
+        .stars {
+            color: #e6a34e;
+            letter-spacing: 3px;
+            margin-bottom: 14px;
+        }
+
+        .testimonial p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .customer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--pink-soft);
+        }
+
+        .customer strong {
+            font-size: 13px;
+        }
+
+        .customer small {
+            display: block;
+            color: var(--muted);
+            font-size: 10px;
+        }
+
+        /* =========================
+           PROMO
+        ========================= */
+
+        .promo {
+            padding: 65px;
+            border-radius: 30px;
+            color: white;
+            background:
+                linear-gradient(
+                    100deg,
+                    rgba(122,64,81,.95),
+                    rgba(202,124,146,.82)
+                ),
+                url("https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1600&q=85")
+                center/cover;
+        }
+
+        .promo h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(35px, 5vw, 58px);
+            max-width: 650px;
+            line-height: 1.1;
+        }
+
+        .promo p {
+            max-width: 580px;
+            margin: 15px 0 25px;
+            color: #f9e9ed;
+        }
+
+        .promo .btn {
+            background: white;
+            color: var(--pink-dark);
+        }
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(25,15,19,.7);
+            backdrop-filter: blur(8px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-box {
+            width: min(550px, 100%);
+            padding: 35px;
+            border-radius: 25px;
+            background: var(--white);
+            position: relative;
+            animation: modalIn .3s ease;
+            box-shadow: 0 30px 80px rgba(0,0,0,.25);
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 18px;
+            border: none;
+            background: transparent;
+            font-size: 27px;
+            cursor: pointer;
+            color: var(--text);
+        }
+
+        .modal-box h2 {
+            font-family: "Playfair Display", serif;
+            color: var(--pink-dark);
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .modal-box p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 45px;
+        }
+
+        footer .logo {
+            color: #f3b0c1;
+        }
+
+        .footer-brand p {
+            color: #b6a9ad;
+            font-size: 13px;
+            margin-top: 15px;
+            max-width: 300px;
+        }
+
+        footer h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin: 9px 0;
+            color: #b6a9ad;
+            font-size: 13px;
+        }
+
+        footer li:hover {
+            color: #f3b0c1;
+            cursor: pointer;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding-top: 25px;
+            color: #8e8286;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: .8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            --cream: #171214;
+            --white: #241d20;
+            --text: #f8edf0;
+            --muted: #b8aaaf;
+            --border: #3b3034;
+            --pink-soft: #38262c;
+            --dark: #0d0a0b;
+        }
+
+        body.dark header {
+            background: rgba(23,18,20,.9);
+        }
+
+        body.dark .hero::before {
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(23,18,20,.96),
+                    rgba(23,18,20,.7),
+                    rgba(23,18,20,.25)
+                ),
+                url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+        }
+
+        body.dark .btn-outline {
+            color: var(--text);
+            background: rgba(255,255,255,.04);
+        }
 
         /* =========================
            RESPONSIVE
         ========================= */
 
-        @media (max-width: 700px) {
-
-            body {
-                padding: 10px;
+        @media (max-width: 1050px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .cv {
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .routine {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                padding: 25px;
+                background: var(--white);
+                flex-direction: column;
+                gap: 20px;
+                border-bottom: 1px solid var(--border);
+                transform: translateY(-150%);
+                transition: .3s;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .sidebar {
-                text-align: center;
+            .about-image {
+                height: 430px;
             }
 
-            .content {
-                padding: 25px;
+            .tips-grid,
+            .testimonial-grid {
+                grid-template-columns: 1fr;
             }
 
-            .header h1 {
-                font-size: 28px;
+            .hero {
+                min-height: 90vh;
             }
 
+            .hero::before {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(255,250,247,.93),
+                        rgba(255,250,247,.6)
+                    ),
+                    url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80")
+                    center/cover;
+            }
+
+            body.dark .hero::before {
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(23,18,20,.94),
+                        rgba(23,18,20,.6)
+                    ),
+                    url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=80")
+                    center/cover;
+            }
+
+            .promo {
+                padding: 40px 25px;
+            }
         }
 
-
-        /* =========================
-           PRINT
-        ========================= */
-
-        @media print {
-
-            body {
-                background: white;
-                padding: 0;
+        @media (max-width: 520px) {
+            .section {
+                padding: 70px 0;
             }
 
-            .cv {
-                width: 100%;
-                box-shadow: none;
+            .hero h1 {
+                font-size: 44px;
             }
 
-            .print {
-                display: none;
+            .hero-info {
+                gap: 20px;
             }
 
+            .category-grid,
+            .product-grid,
+            .routine {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 350px;
+            }
         }
-
     </style>
-
 </head>
-
 
 <body>
 
+    <!-- =========================
+         HEADER
+    ========================= -->
 
-<div class="cv">
+    <header>
 
+        <div class="container navbar">
 
-    <!-- =================================
-         SIDEBAR
-    ================================== -->
+            <a href="#home" class="logo">
+                LUMÉA
+                <small>BEAUTY</small>
+            </a>
 
-    <aside class="sidebar">
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Menu"
+            >
+                ☰
+            </button>
 
-        <div class="profile">
-
-            <!-- FOTO BARU -->
-            <img src="foto" alt="Foto Andi Nurhikma">
-
-            <h1>Andi Nurhikma</h1>
-
-            <p>
-                Teknik Jaringan Komputer
-                dan Telekomunikasi
-            </p>
-
-            <div class="garis"></div>
-
-        </div>
-
-
-        <!-- KONTAK -->
-
-        <div class="sidebar-section contact">
-
-            <h2>KONTAK</h2>
-
-            <p>
-                📧
-                anurhikmamakmur@gmail.com
-            </p>
-
-            <p>
-                📍
-                Indonesia
-            </p>
-
-        </div>
-
-
-        <!-- KEAHLIAN -->
-
-        <div class="sidebar-section">
-
-            <h2>KEAHLIAN</h2>
-
-            <ul class="skills">
+            <ul class="nav-links" id="navLinks">
 
                 <li>
-                    Crimping Kabel
+                    <a href="#home">Home</a>
                 </li>
 
                 <li>
-                    Perakitan Komputer
+                    <a href="#products">Products</a>
                 </li>
 
                 <li>
-                    Dasar Jaringan Komputer
+                    <a href="#about">About</a>
                 </li>
 
                 <li>
-                    Troubleshooting
+                    <a href="#tips">Beauty Tips</a>
+                </li>
+
+                <li>
+                    <a href="#reviews">Reviews</a>
+                </li>
+
+                <li>
+                    <button
+                        class="theme-btn"
+                        id="themeBtn"
+                    >
+                        ☾
+                    </button>
                 </li>
 
             </ul>
 
         </div>
 
+    </header>
 
-        <!-- BAHASA -->
+    <!-- =========================
+         HERO
+    ========================= -->
 
-        <div class="sidebar-section">
+    <main>
 
-            <h2>BAHASA</h2>
+        <section class="hero" id="home">
 
-            <ul class="skills">
+            <div class="container">
 
-                <li>
-                    Bahasa Indonesia
-                </li>
+                <div class="hero-content reveal">
 
-                <li>
-                    Bahasa Inggris Dasar
-                </li>
+                    <div class="eyebrow">
+                        Discover Your Beauty
+                    </div>
 
-            </ul>
+                    <h1>
+                        Beauty Begins
+                        <span>With You.</span>
+                    </h1>
+
+                    <p>
+                        Temukan koleksi skincare dan makeup pilihan
+                        untuk merawat kulit, meningkatkan rasa percaya
+                        diri, dan membuat setiap hari terasa lebih indah.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a
+                            href="#products"
+                            class="btn btn-primary"
+                        >
+                            Explore Products
+                        </a>
+
+                        <a
+                            href="#tips"
+                            class="btn btn-outline"
+                        >
+                            Beauty Tips
+                        </a>
+
+                    </div>
+
+                    <div class="hero-info">
+
+                        <div>
+                            <strong>50K+</strong>
+                            <span>Beauty Lovers</span>
+                        </div>
+
+                        <div>
+                            <strong>100+</strong>
+                            <span>Beauty Products</span>
+                        </div>
+
+                        <div>
+                            <strong>4.9/5</strong>
+                            <span>Customer Rating</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             CATEGORIES
+        ========================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span>Explore</span>
+
+                    <h2>Beauty Categories</h2>
+
+                    <p>
+                        Pilih kebutuhan kecantikan yang ingin kamu
+                        jelajahi hari ini.
+                    </p>
+
+                </div>
+
+                <div class="category-grid">
+
+                    <article class="category reveal">
+
+                        <div class="category-icon">
+                            🧴
+                        </div>
+
+                        <h3>Skincare</h3>
+
+                        <p>
+                            Perawatan kulit harian.
+                        </p>
+
+                    </article>
+
+                    <article class="category reveal">
+
+                        <div class="category-icon">
+                            💄
+                        </div>
+
+                        <h3>Makeup</h3>
+
+                        <p>
+                            Makeup untuk berbagai aktivitas.
+                        </p>
+
+                    </article>
+
+                    <article class="category reveal">
+
+                        <div class="category-icon">
+                            💆
+                        </div>
+
+                        <h3>Body Care</h3>
+
+                        <p>
+                            Rawat kulit tubuh dengan nyaman.
+                        </p>
+
+                    </article>
+
+                    <article class="category reveal">
+
+                        <div class="category-icon">
+                            ✨
+                        </div>
+
+                        <h3>Beauty Tools</h3>
+
+                        <p>
+                            Peralatan kecantikan pilihan.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             PRODUCTS
+        ========================= -->
+
+        <section
+            class="section"
+            id="products"
+        >
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span>Our Collection</span>
+
+                    <h2>Best Beauty Products</h2>
+
+                    <p>
+                        Koleksi produk kecantikan yang cocok untuk
+                        melengkapi rutinitas harian.
+                    </p>
+
+                </div>
+
+                <div class="product-search reveal">
+
+                    <input
+                        type="text"
+                        id="productSearch"
+                        placeholder="Cari produk kecantikan..."
+                    >
+
+                </div>
+
+                <div
+                    class="product-grid"
+                    id="productGrid"
+                >
+
+                    <article
+                        class="product-card reveal"
+                        data-name="rose glow serum skincare serum"
+                    >
+
+                        <div class="product-image product-image-1">
+
+                            <span class="badge">
+                                BEST SELLER
+                            </span>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <small>SKINCARE</small>
+
+                            <h3>Rose Glow Serum</h3>
+
+                            <p>
+                                Serum dengan formula ringan untuk
+                                rutinitas perawatan kulit.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    Rp129.000
+                                </span>
+
+                                <button
+                                    class="product-btn"
+                                    onclick="showProduct(
+                                        'Rose Glow Serum',
+                                        'Serum wajah dengan tekstur ringan untuk melengkapi rutinitas skincare harian.'
+                                    )"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article
+                        class="product-card reveal"
+                        data-name="soft cloud moisturizer cream skincare"
+                    >
+
+                        <div class="product-image product-image-2">
+
+                            <span class="badge">
+                                NEW
+                            </span>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <small>SKINCARE</small>
+
+                            <h3>Soft Cloud Cream</h3>
+
+                            <p>
+                                Pelembap dengan tekstur lembut
+                                untuk penggunaan sehari-hari.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    Rp149.000
+                                </span>
+
+                                <button
+                                    class="product-btn"
+                                    onclick="showProduct(
+                                        'Soft Cloud Cream',
+                                        'Moisturizer dengan tekstur lembut yang cocok digunakan dalam rutinitas skincare.'
+                                    )"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article
+                        class="product-card reveal"
+                        data-name="velvet lip tint makeup lipstick"
+                    >
+
+                        <div class="product-image product-image-3">
+
+                            <span class="badge">
+                                POPULAR
+                            </span>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <small>MAKEUP</small>
+
+                            <h3>Velvet Lip Tint</h3>
+
+                            <p>
+                                Lip tint dengan warna lembut
+                                untuk tampilan sehari-hari.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    Rp89.000
+                                </span>
+
+                                <button
+                                    class="product-btn"
+                                    onclick="showProduct(
+                                        'Velvet Lip Tint',
+                                        'Lip tint dengan pilihan warna lembut yang mudah digunakan untuk berbagai gaya makeup.'
+                                    )"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article
+                        class="product-card reveal"
+                        data-name="natural blush makeup blush"
+                    >
+
+                        <div class="product-image product-image-4">
+
+                            <span class="badge">
+                                FAVORITE
+                            </span>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <small>MAKEUP</small>
+
+                            <h3>Natural Blush</h3>
+
+                            <p>
+                                Blush dengan warna natural untuk
+                                memberikan kesan segar.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    Rp99.000
+                                </span>
+
+                                <button
+                                    class="product-btn"
+                                    onclick="showProduct(
+                                        'Natural Blush',
+                                        'Blush dengan pilihan warna natural untuk melengkapi tampilan makeup.'
+                                    )"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <section
+            class="section"
+            id="about"
+        >
+
+            <div class="container about-grid">
+
+                <div class="about-image reveal"></div>
+
+                <div class="about-content reveal">
+
+                    <span>OUR STORY</span>
+
+                    <h2>
+                        Beauty Is About
+                        Feeling Good.
+                    </h2>
+
+                    <p>
+                        LUMÉA Beauty hadir untuk membuat perawatan
+                        kecantikan terasa lebih sederhana, nyaman,
+                        dan menyenangkan.
+                    </p>
+
+                    <p>
+                        Kami percaya bahwa setiap orang memiliki
+                        kecantikan dan gaya masing-masing.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>
+                            Produk pilihan untuk rutinitas harian
+                        </li>
+
+                        <li>
+                            Inspirasi makeup dan skincare
+                        </li>
+
+                        <li>
+                            Tampilan website modern dan nyaman
+                        </li>
+
+                        <li>
+                            Koleksi beauty yang mudah dijelajahi
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="#tips"
+                        class="btn btn-primary"
+                    >
+                        Discover More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             BEAUTY TIPS
+        ========================= -->
+
+        <section
+            class="section tips"
+            id="tips"
+        >
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span>Beauty Journal</span>
+
+                    <h2>Beauty Tips</h2>
+
+                    <p>
+                        Beberapa kebiasaan sederhana yang dapat
+                        membantu membuat rutinitas kecantikan
+                        lebih teratur.
+                    </p>
+
+                </div>
+
+                <div class="tips-grid">
+
+                    <article class="tip-card reveal">
+
+                        <div class="tip-image tip-1"></div>
+
+                        <div class="tip-content">
+
+                            <span>Skincare</span>
+
+                            <h3>
+                                Kenali Rutinitas Kulitmu
+                            </h3>
+
+                            <p>
+                                Gunakan produk sesuai kebutuhan
+                                kulit dan lakukan rutinitas
+                                secara konsisten.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="tip-card reveal">
+
+                        <div class="tip-image tip-2"></div>
+
+                        <div class="tip-content">
+
+                            <span>Self Care</span>
+
+                            <h3>
+                                Luangkan Waktu Untuk Diri
+                            </h3>
+
+                            <p>
+                                Perawatan diri dapat menjadi
+                                bagian menyenangkan dari aktivitas
+                                sehari-hari.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="tip-card reveal">
+
+                        <div class="tip-image tip-3"></div>
+
+                        <div class="tip-content">
+
+                            <span>Beauty</span>
+
+                            <h3>
+                                Less Is More
+                            </h3>
+
+                            <p>
+                                Tidak selalu membutuhkan banyak
+                                produk. Pilih produk yang sesuai
+                                kebutuhanmu.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             ROUTINE
+        ========================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span>Daily Routine</span>
+
+                    <h2>Simple Beauty Routine</h2>
+
+                    <p>
+                        Contoh urutan sederhana untuk rutinitas
+                        perawatan kulit.
+                    </p>
+
+                </div>
+
+                <div class="routine">
+
+                    <article class="routine-card reveal">
+
+                        <div class="routine-number">
+                            01
+                        </div>
+
+                        <h3>Cleanse</h3>
+
+                        <p>
+                            Bersihkan wajah dari kotoran
+                            dan sisa makeup.
+                        </p>
+
+                    </article>
+
+                    <article class="routine-card reveal">
+
+                        <div class="routine-number">
+                            02
+                        </div>
+
+                        <h3>Tone</h3>
+
+                        <p>
+                            Gunakan toner sesuai kebutuhan
+                            rutinitas kulit.
+                        </p>
+
+                    </article>
+
+                    <article class="routine-card reveal">
+
+                        <div class="routine-number">
+                            03
+                        </div>
+
+                        <h3>Moisturize</h3>
+
+                        <p>
+                            Gunakan pelembap untuk melengkapi
+                            rutinitas skincare.
+                        </p>
+
+                    </article>
+
+                    <article class="routine-card reveal">
+
+                        <div class="routine-number">
+                            04
+                        </div>
+
+                        <h3>Protect</h3>
+
+                        <p>
+                            Gunakan sunscreen pada pagi atau
+                            siang hari sesuai petunjuk produk.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             TESTIMONIAL
+        ========================= -->
+
+        <section
+            class="section"
+            id="reviews"
+        >
+
+            <div class="container">
+
+                <div class="section-title reveal">
+
+                    <span>Community</span>
+
+                    <h2>What They Say</h2>
+
+                    <p>
+                        Cerita dari pengguna yang menikmati
+                        pengalaman LUMÉA Beauty.
+                    </p>
+
+                </div>
+
+                <div class="testimonial-grid">
+
+                    <article class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Tampilannya cantik dan informasi
+                            produknya mudah ditemukan."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="avatar">
+                                🌸
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Alya
+                                </strong>
+
+                                <small>
+                                    Beauty Lover
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Aku suka bagian beauty tips karena
+                            sederhana dan gampang dipahami."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="avatar">
+                                💕
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Naya
+                                </strong>
+
+                                <small>
+                                    Skincare Enthusiast
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                    <article class="testimonial reveal">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "Desain websitenya terlihat elegan
+                            dan cocok untuk brand kecantikan."
+                        </p>
+
+                        <div class="customer">
+
+                            <div class="avatar">
+                                ✨
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Citra
+                                </strong>
+
+                                <small>
+                                    Makeup Lover
+                                </small>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             PROMO
+        ========================= -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="promo reveal">
+
+                    <h2>
+                        Your Beauty,
+                        Your Story.
+                    </h2>
+
+                    <p>
+                        Jelajahi koleksi kecantikan dan temukan
+                        produk yang sesuai dengan rutinitasmu.
+                    </p>
+
+                    <a
+                        href="#products"
+                        class="btn"
+                    >
+                        Shop Collection
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <div class="logo">
+                        LUMÉA
+                        <small>BEAUTY</small>
+                    </div>
+
+                    <p>
+                        Website konsep kecantikan modern yang
+                        menghadirkan inspirasi skincare, makeup,
+                        beauty tips, dan self care.
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <h3>Explore</h3>
+
+                    <ul>
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>Beauty Tips</li>
+                        <li>Reviews</li>
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h3>Categories</h3>
+
+                    <ul>
+                        <li>Skincare</li>
+                        <li>Makeup</li>
+                        <li>Body Care</li>
+                        <li>Beauty Tools</li>
+                    </ul>
+
+                </div>
+
+                <div>
+
+                    <h3>Contact</h3>
+
+                    <ul>
+                        <li>Instagram</li>
+                        <li>WhatsApp</li>
+                        <li>Email</li>
+                        <li>Location</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="copyright">
+
+                © <span id="year"></span>
+                LUMÉA Beauty. All Rights Reserved.
+
+            </div>
 
         </div>
 
+    </footer>
 
-        <div class="wave"></div>
+    <!-- =========================
+         PRODUCT MODAL
+    ========================= -->
 
-    </aside>
+    <div
+        class="modal"
+        id="productModal"
+    >
 
+        <div class="modal-box">
 
+            <button
+                class="modal-close"
+                onclick="closeProduct()"
+            >
+                ×
+            </button>
 
-    <!-- =================================
-         KONTEN UTAMA
-    ================================== -->
+            <h2 id="modalTitle">
+                Product
+            </h2>
 
-    <main class="content">
-
-
-        <!-- HEADER -->
-
-        <div class="header">
-
-            <h1>
-                Andi Nurhikma
-            </h1>
-
-            <p>
-                Teknik Jaringan Komputer dan Telekomunikasi
+            <p id="modalText">
+                Product description.
             </p>
 
-        </div>
+            <br>
 
-
-
-        <!-- PROFIL -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Profil
-            </h2>
-
-            <p>
-                Saya adalah seorang pelajar jurusan Teknik Jaringan
-                Komputer dan Telekomunikasi yang memiliki minat pada
-                bidang komputer, jaringan, dan teknologi informasi.
-                Saya memiliki keterampilan dasar dalam crimping kabel
-                serta pengalaman dalam perakitan komputer. Saya
-                berkomitmen untuk terus belajar, mengembangkan
-                kemampuan, dan siap bekerja sama dalam tim.
-            </p>
-
-        </section>
-
-
-
-        <!-- PENDIDIKAN -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Pendidikan
-            </h2>
-
-            <div class="item">
-
-                <h3>
-                    SMK Airlangga
-                </h3>
-
-                <span class="date">
-                    Sedang Menempuh Pendidikan
-                </span>
-
-                <p>
-                    Jurusan Teknik Jaringan Komputer
-                    dan Telekomunikasi.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- PENGALAMAN -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Pengalaman
-            </h2>
-
-
-            <div class="item">
-
-                <h3>
-                    Perakitan Komputer
-                </h3>
-
-                <span class="date">
-                    Pengalaman Praktik
-                </span>
-
-                <p>
-                    Melakukan proses perakitan komputer dengan
-                    mengenali komponen perangkat keras dan
-                    memasangnya sesuai fungsi masing-masing.
-                </p>
-
-            </div>
-
-
-            <div class="item">
-
-                <h3>
-                    Crimping Kabel Jaringan
-                </h3>
-
-                <span class="date">
-                    Pengalaman Praktik
-                </span>
-
-                <p>
-                    Melakukan proses crimping kabel jaringan
-                    menggunakan konektor RJ45 dan memahami
-                    dasar penyusunan kabel jaringan.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- KETERAMPILAN -->
-
-        <section class="section">
-
-            <h2 class="section-title">
-                Keterampilan
-            </h2>
-
-            <div class="tags">
-
-                <span class="tag">
-                    Crimping Kabel
-                </span>
-
-                <span class="tag">
-                    Perakitan PC
-                </span>
-
-                <span class="tag">
-                    Hardware
-                </span>
-
-                <span class="tag">
-                    Jaringan Komputer
-                </span>
-
-                <span class="tag">
-                    Troubleshooting Dasar
-                </span>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- PRINT -->
-
-        <div class="print">
-
-            <button onclick="window.print()">
-                🖨️ Cetak / Simpan PDF
+            <button
+                class="btn btn-primary"
+                onclick="closeProduct()"
+            >
+                Tutup
             </button>
 
         </div>
 
+    </div>
 
-    </main>
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
-</div>
+    <script>
 
+        // =========================
+        // MOBILE MENU
+        // =========================
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+        // =========================
+        // DARK MODE
+        // =========================
+
+        const themeBtn =
+            document.getElementById("themeBtn");
+
+        themeBtn.addEventListener("click", () => {
+
+            document.body.classList.toggle("dark");
+
+            if (
+                document.body.classList.contains("dark")
+            ) {
+
+                themeBtn.textContent = "☀";
+
+            } else {
+
+                themeBtn.textContent = "☾";
+
+            }
+
+        });
+
+        // =========================
+        // PRODUCT SEARCH
+        // =========================
+
+        const search =
+            document.getElementById("productSearch");
+
+        const products =
+            document.querySelectorAll(".product-card");
+
+        search.addEventListener("input", () => {
+
+            const keyword =
+                search.value.toLowerCase().trim();
+
+            products.forEach(product => {
+
+                const name =
+                    product.dataset.name.toLowerCase();
+
+                if (name.includes(keyword)) {
+
+                    product.style.display = "";
+
+                } else {
+
+                    product.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+        // =========================
+        // PRODUCT MODAL
+        // =========================
+
+        const productModal =
+            document.getElementById("productModal");
+
+        const modalTitle =
+            document.getElementById("modalTitle");
+
+        const modalText =
+            document.getElementById("modalText");
+
+        function showProduct(title, description) {
+
+            modalTitle.textContent = title;
+
+            modalText.textContent = description;
+
+            productModal.classList.add("active");
+
+        }
+
+        function closeProduct() {
+
+            productModal.classList.remove("active");
+
+        }
+
+        productModal.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === productModal
+                ) {
+
+                    closeProduct();
+
+                }
+
+            }
+        );
+
+        // =========================
+        // ESCAPE MODAL
+        // =========================
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+
+                    closeProduct();
+
+                }
+
+            }
+        );
+
+        // =========================
+        // CURRENT YEAR
+        // =========================
+
+        document.getElementById("year")
+            .textContent =
+            new Date().getFullYear();
+
+        // =========================
+        // SCROLL ANIMATION
+        // =========================
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (
+                            entry.isIntersecting
+                        ) {
+
+                            entry.target
+                                .classList
+                                .add("show");
+
+                            observer
+                                .unobserve(
+                                    entry.target
+                                );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        revealElements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+    </script>
 
 </body>
 </html>
